@@ -8,11 +8,6 @@ A NuGet package is available at https://www.nuget.org/packages/Albireo.Base32/
 
 This project is licensed under [the MIT license], you can find a copy of the license in the LICENSE.txt file.
 
-## Requirments
-
-- Microsoft Visual Studio 2013
-- Code Contracts
-
 ## Credits
 
 This library has been adapted from [Devin Martin]'s [Base32] library which too is licensed under [the MIT license].

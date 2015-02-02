@@ -1,7 +1,6 @@
 ﻿namespace Albireo.Base32
 {
     using System;
-    using System.Diagnostics.Contracts;
 
     public static class Base32
     {
@@ -12,8 +11,6 @@
 
         public static string Encode(byte[] input)
         {
-            Contract.Requires<ArgumentException>(input != null);
-            Contract.Ensures(Contract.Result<string>() != null);
 
             if (input.Length == 0)
             {
@@ -55,9 +52,6 @@
 
         public static byte[] Decode(string input)
         {
-            Contract.Requires<ArgumentNullException>(input != null);
-            Contract.Requires<ArgumentException>(Contract.ForAll(input.ToCharArray(), x => Alphabet.IndexOf(x) >= 0 || x == Padding));
-            Contract.Ensures(Contract.Result<byte[]>() != null);
 
             if (string.IsNullOrEmpty(input))
             {
